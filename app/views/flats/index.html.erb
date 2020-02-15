@@ -1,0 +1,14 @@
+<h1>All Flats available</h1>
+<div class="cards">
+<% @flats.each do |flat| %>
+  <div class="card">
+    <%= image_tag flat.picture_url, class:"card-img img-fluid" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.description %></p>
+    </div>
+    <%= link_to "See more", flat_path(flat), class:"btn btn-primary"%>
+  </div>
+<% end %>
+</div>
+</div>
